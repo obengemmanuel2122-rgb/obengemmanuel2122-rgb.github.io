@@ -1,51 +1,176 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Aboagye Specs Auto Services</title>
+  <title>Aboagye Auto Works</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: white;
+    }
+
+    header {
+      background: #020617;
+      padding: 15px;
+      text-align: center;
+      border-bottom: 2px solid #22c55e;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #22c55e;
+    }
+
+    .hero {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .btn {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 20px;
+      background: #22c55e;
+      color: black;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    .section {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .services {
+      display: grid;
+      gap: 15px;
+    }
+
+    .card {
+      background: #020617;
+      padding: 20px;
+      border-radius: 10px;
+      border: 1px solid #1e293b;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+      margin-top: 10px;
+    }
+
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
+      border-radius: 10px;
+    }
+
+    footer {
+      background: #020617;
+      padding: 20px;
+      text-align: center;
+      border-top: 2px solid #22c55e;
+    }
+
+    .sticky {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background: black;
+      padding: 10px;
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .sticky a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    @media(min-width: 600px) {
+      .services {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  </style>
 </head>
 
-<body style="font-family: Arial; margin: 0; background: #f5f5f5;">
+<body>
 
-  <!-- HERO -->
-  <div style="background: #1a1a1a; color: white; padding: 40px; text-align: center;">
-    <h1>Aboagye Specs Auto Services</h1>
-    <p>Reliable Car Repairs in Accra</p>
-    <a href="https://wa.me/233549115793" 
-       style="background: #ff6600; color: white; padding: 12px 20px; text-decoration: none; border-radius: 5px;">
-       Book Service on WhatsApp
-    </a>
+<header>
+  <div class="logo">🔧 Aboagye Auto Works</div>
+</header>
+
+<section class="hero">
+  <h1>Fast & Reliable Auto Repair</h1>
+  <p>24/7 Automotive Services in Accra</p>
+
+  <a href="tel:+233549115793" class="btn">📞 Call Now</a>
+  <a href="https://wa.me/233549115793?text=Hello%20I%20need%20help%20with%20my%20car" class="btn">
+    💬 WhatsApp
+  </a>
+</section>
+
+<section class="section">
+  <h2>Our Services</h2>
+  <div class="services">
+    <div class="card">Engine Diagnostics</div>
+    <div class="card">Brake Repair</div>
+    <div class="card">Oil Change</div>
+    <div class="card">Full Car Repair</div>
+    <div class="card">Emergency Service</div>
+    <div class="card">Maintenance</div>
   </div>
+</section>
 
-  <!-- SERVICES -->
-  <div style="padding: 20px;">
-    <h2 style="text-align:center;">Our Services</h2>
+<section class="section gallery">
+  <h2>Before & After Work</h2>
+  <p>Add real photos of your work here</p>
+  <img src="https://via.placeholder.com/400x200" alt="Before">
+  <img src="https://via.placeholder.com/400x200" alt="After">
+</section>
 
-    <div style="background: white; padding: 15px; margin: 10px; border-radius: 8px;">
-      🔧 Engine Repairs
-    </div>
+<section class="section">
+  <h2>What Customers Say</h2>
+  <div class="card">⭐ "Very fast and reliable mechanic!"</div>
+  <div class="card">⭐ "Fixed my car same day. Highly recommend."</div>
+</section>
 
-    <div style="background: white; padding: 15px; margin: 10px; border-radius: 8px;">
-      🛢 Oil Change & Maintenance
-    </div>
+<section class="section">
+  <h2>Get Help Now</h2>
+  <p>Need urgent car repair? Contact us instantly.</p>
 
-    <div style="background: white; padding: 15px; margin: 10px; border-radius: 8px;">
-      🚗 Car Diagnostics
-    </div>
-  </div>
+  <a href="tel:+233549115793" class="btn">📞 Call Now</a>
+  <a href="https://wa.me/233549115793?text=Hello%20I%20need%20help%20with%20my%20car" class="btn">
+    💬 Chat on WhatsApp
+  </a>
+</section>
 
-  <!-- WHY CHOOSE US -->
-  <div style="padding: 20px; text-align:center;">
-    <h2>Why Choose Us</h2>
-    <p>We provide fast, reliable and affordable car repair services in Accra.</p>
-  </div>
+<section class="section">
+  <h2>Location</h2>
+  <p>Darkuman Kokompe A.M.A Road</p>
 
-  <!-- CONTACT -->
-  <div style="background: #222; color: white; padding: 20px; text-align:center;">
-    <h2>Contact Us</h2>
-    <p>Call/WhatsApp: +233 54 911 5793</p>
-    <a href="https://wa.me/233549115793" style="color: #ff6600;">Chat on WhatsApp</a>
-  </div>
+  <iframe 
+    src="https://maps.google.com/maps?q=Darkuman%20Kokompe%20Accra&t=&z=13&ie=UTF8&iwloc=&output=embed">
+  </iframe>
+</section>
+
+<footer>
+  <p>📞 +233 54 911 5793</p>
+  <p>Open 24 Hours</p>
+</footer>
+
+<div class="sticky">
+  <a href="tel:+233549115793">📞 Call</a>
+  <a href="https://wa.me/233549115793?text=Hello%20I%20need%20help%20with%20my%20car">💬 WhatsApp</a>
+</div>
 
 </body>
 </html>
