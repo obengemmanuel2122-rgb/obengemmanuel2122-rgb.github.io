@@ -1,176 +1,223 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Aboagye Auto Works</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sam’s Apple Store</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0f172a;
-      color: white;
-    }
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
 
-    header {
-      background: #020617;
-      padding: 15px;
-      text-align: center;
-      border-bottom: 2px solid #22c55e;
-    }
+body{
+  font-family:-apple-system,BlinkMacSystemFont,sans-serif;
+  background:#000;
+  color:#fff;
+}
 
-    .logo {
-      font-size: 24px;
-      font-weight: bold;
-      color: #22c55e;
-    }
+/* NAV */
+nav{
+  display:flex;
+  justify-content:space-between;
+  padding:20px;
+  background:#000;
+  position:sticky;
+  top:0;
+}
 
-    .hero {
-      padding: 60px 20px;
-      text-align: center;
-    }
+nav h1{font-size:18px;}
+nav a{color:#aaa;text-decoration:none;margin-left:15px;}
 
-    .btn {
-      display: inline-block;
-      margin: 10px;
-      padding: 12px 20px;
-      background: #22c55e;
-      color: black;
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: bold;
-    }
+/* HERO */
+.hero{
+  text-align:center;
+  padding:100px 20px;
+}
 
-    .section {
-      padding: 40px 20px;
-      text-align: center;
-    }
+.hero h2{
+  font-size:40px;
+}
 
-    .services {
-      display: grid;
-      gap: 15px;
-    }
+.hero p{
+  color:#aaa;
+  margin:15px 0 25px;
+}
 
-    .card {
-      background: #020617;
-      padding: 20px;
-      border-radius: 10px;
-      border: 1px solid #1e293b;
-    }
+.btn{
+  background:#25D366;
+  padding:14px 28px;
+  border-radius:30px;
+  color:#fff;
+  text-decoration:none;
+  font-weight:bold;
+  display:inline-block;
+}
 
-    .gallery img {
-      width: 100%;
-      border-radius: 10px;
-      margin-top: 10px;
-    }
+/* SECTION */
+.section{
+  padding:70px 20px;
+  text-align:center;
+}
 
-    iframe {
-      width: 100%;
-      height: 300px;
-      border: none;
-      border-radius: 10px;
-    }
+/* PRODUCTS */
+.products{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:25px;
+  margin-top:30px;
+}
 
-    footer {
-      background: #020617;
-      padding: 20px;
-      text-align: center;
-      border-top: 2px solid #22c55e;
-    }
+.card{
+  background:#111;
+  padding:20px;
+  border-radius:15px;
+  transition:0.3s;
+  position:relative;
+}
 
-    .sticky {
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-      background: black;
-      padding: 10px;
-      display: flex;
-      justify-content: space-around;
-    }
+.card:hover{
+  transform:translateY(-10px);
+}
 
-    .sticky a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
+.badge{
+  position:absolute;
+  top:10px;
+  left:10px;
+  background:#0f0;
+  color:#000;
+  padding:5px 10px;
+  font-size:12px;
+  border-radius:5px;
+}
 
-    @media(min-width: 600px) {
-      .services {
-        grid-template-columns: repeat(3, 1fr);
-      }
-    }
-  </style>
+.card img{
+  width:100%;
+  border-radius:10px;
+}
+
+.price{
+  color:#0f0;
+  margin-top:5px;
+}
+
+/* DARK SECTION */
+.dark{
+  background:#111;
+}
+
+footer{
+  text-align:center;
+  padding:30px;
+  color:#777;
+}
+</style>
 </head>
 
 <body>
 
-<header>
-  <div class="logo">🔧 Aboagye Auto Works</div>
-</header>
+<nav>
+  <h1> Sam’s Apple Store</h1>
+  <div>
+    <a href="#products">Products</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
 
 <section class="hero">
-  <h1>Fast & Reliable Auto Repair</h1>
-  <p>24/7 Automotive Services in Accra</p>
+  <h2>Buy • Sell • Swap iPhones</h2>
+  <p>Original Apple Devices • Trusted Seller • Best Deals</p>
 
-  <a href="tel:+233549115793" class="btn">📞 Call Now</a>
-  <a href="https://wa.me/233549115793?text=Hello%20I%20need%20help%20with%20my%20car" class="btn">
-    💬 WhatsApp
+  <a class="btn" href="https://wa.me/233538603560?text=Hello%20I%20want%20to%20buy%20an%20iPhone">
+    Chat on WhatsApp
   </a>
 </section>
 
-<section class="section">
-  <h2>Our Services</h2>
-  <div class="services">
-    <div class="card">Engine Diagnostics</div>
-    <div class="card">Brake Repair</div>
-    <div class="card">Oil Change</div>
-    <div class="card">Full Car Repair</div>
-    <div class="card">Emergency Service</div>
-    <div class="card">Maintenance</div>
+<section class="section" id="products">
+  <h2>Available iPhones</h2>
+
+  <div class="products">
+
+    <div class="card">
+      <span class="badge">Available</span>
+      <img src="https://images.unsplash.com/photo-1574672280600-4b7b3f6c1c2f">
+      <h3>iPhone 11 (64GB)</h3>
+      <p>Clean condition • Face ID working</p>
+      <p class="price">Contact for price</p>
+      <a class="btn" href="https://wa.me/233538603560?text=I%20want%20iPhone%2011">Buy Now</a>
+    </div>
+
+    <div class="card">
+      <span class="badge">Hot 🔥</span>
+      <img src="https://images.unsplash.com/photo-1603898037225-1c9c2d0f8c89">
+      <h3>iPhone 12 Pro</h3>
+      <p>Excellent battery • Sharp camera</p>
+      <p class="price">Contact for price</p>
+      <a class="btn" href="https://wa.me/233538603560?text=I%20want%20iPhone%2012%20Pro">Buy Now</a>
+    </div>
+
+    <div class="card">
+      <span class="badge">New</span>
+      <img src="https://images.unsplash.com/photo-1632661674596-618eecb7d3d1">
+      <h3>iPhone 13 Pro Max</h3>
+      <p>Premium performance • Long battery</p>
+      <p class="price">Contact for price</p>
+      <a class="btn" href="https://wa.me/233538603560?text=I%20want%20iPhone%2013%20Pro%20Max">Buy Now</a>
+    </div>
+
+    <div class="card">
+      <span class="badge">Latest</span>
+      <img src="https://images.unsplash.com/photo-1663499482523-1d3f5d1a3cd5">
+      <h3>iPhone 14</h3>
+      <p>Modern design • Smooth performance</p>
+      <p class="price">Contact for price</p>
+      <a class="btn" href="https://wa.me/233538603560?text=I%20want%20iPhone%2014">Buy Now</a>
+    </div>
+
+    <div class="card">
+      <span class="badge">Premium</span>
+      <img src="https://images.unsplash.com/photo-1695048133141-6dba2d8c9e5c">
+      <h3>iPhone 15 Pro</h3>
+      <p>Top performance • Latest model</p>
+      <p class="price">Contact for price</p>
+      <a class="btn" href="https://wa.me/233538603560?text=I%20want%20iPhone%2015%20Pro">Buy Now</a>
+    </div>
+
   </div>
 </section>
 
-<section class="section gallery">
-  <h2>Before & After Work</h2>
-  <p>Add real photos of your work here</p>
-  <img src="https://via.placeholder.com/400x200" alt="Before">
-  <img src="https://via.placeholder.com/400x200" alt="After">
+<section class="section dark">
+  <h2>Our Services</h2>
+  <p>✔ Buy iPhones</p>
+  <p>✔ Sell iPhones</p>
+  <p>✔ Phone Swapping Available</p>
+  <p>✔ Accessories (AirPods, Chargers, Cases)</p>
 </section>
 
 <section class="section">
-  <h2>What Customers Say</h2>
-  <div class="card">⭐ "Very fast and reliable mechanic!"</div>
-  <div class="card">⭐ "Fixed my car same day. Highly recommend."</div>
+  <h2>Why Choose Us</h2>
+  <p>✔ Original Apple Devices</p>
+  <p>✔ Trusted Seller in Takoradi</p>
+  <p>✔ Fast WhatsApp Response</p>
+  <p>✔ Best Prices Guaranteed</p>
 </section>
 
-<section class="section">
-  <h2>Get Help Now</h2>
-  <p>Need urgent car repair? Contact us instantly.</p>
+<section class="section dark">
+  <h2>Location</h2>
+  <p>📍 Takoradi – Opposite Ecobank</p>
+</section>
 
-  <a href="tel:+233549115793" class="btn">📞 Call Now</a>
-  <a href="https://wa.me/233549115793?text=Hello%20I%20need%20help%20with%20my%20car" class="btn">
-    💬 Chat on WhatsApp
+<section class="section" id="contact">
+  <h2>Contact</h2>
+  <p>📞 0538603560</p>
+  <p>📧 popsam1409@gmail.com</p>
+
+  <a class="btn" href="https://wa.me/233538603560?text=Hello%20I%20am%20interested%20in%20your%20iPhones">
+    Message Now
   </a>
 </section>
 
-<section class="section">
-  <h2>Location</h2>
-  <p>Darkuman Kokompe A.M.A Road</p>
-
-  <iframe 
-    src="https://maps.google.com/maps?q=Darkuman%20Kokompe%20Accra&t=&z=13&ie=UTF8&iwloc=&output=embed">
-  </iframe>
-</section>
-
 <footer>
-  <p>📞 +233 54 911 5793</p>
-  <p>Open 24 Hours</p>
+  <p>© 2026 Sam’s Apple Store</p>
 </footer>
-
-<div class="sticky">
-  <a href="tel:+233549115793">📞 Call</a>
-  <a href="https://wa.me/233549115793?text=Hello%20I%20need%20help%20with%20my%20car">💬 WhatsApp</a>
-</div>
 
 </body>
 </html>
