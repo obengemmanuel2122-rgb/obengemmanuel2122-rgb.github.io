@@ -1,223 +1,124 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sam’s Apple Store</title>
+  <title>Sam’s Apple Store</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-*{margin:0;padding:0;box-sizing:border-box;}
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: white;
+    }
 
-body{
-  font-family:-apple-system,BlinkMacSystemFont,sans-serif;
-  background:#000;
-  color:#fff;
-}
+    header {
+      text-align: center;
+      padding: 40px 20px;
+    }
 
-/* NAV */
-nav{
-  display:flex;
-  justify-content:space-between;
-  padding:20px;
-  background:#000;
-  position:sticky;
-  top:0;
-}
+    h1 {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
 
-nav h1{font-size:18px;}
-nav a{color:#aaa;text-decoration:none;margin-left:15px;}
+    p {
+      color: #cbd5f5;
+    }
 
-/* HERO */
-.hero{
-  text-align:center;
-  padding:100px 20px;
-}
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 14px 25px;
+      background: #25D366;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+    }
 
-.hero h2{
-  font-size:40px;
-}
+    .section {
+      padding: 30px 20px;
+      text-align: center;
+    }
 
-.hero p{
-  color:#aaa;
-  margin:15px 0 25px;
-}
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
 
-.btn{
-  background:#25D366;
-  padding:14px 28px;
-  border-radius:30px;
-  color:#fff;
-  text-decoration:none;
-  font-weight:bold;
-  display:inline-block;
-}
+    .card {
+      background: #1e293b;
+      padding: 15px;
+      border-radius: 10px;
+    }
 
-/* SECTION */
-.section{
-  padding:70px 20px;
-  text-align:center;
-}
+    .card h3 {
+      margin: 10px 0;
+    }
 
-/* PRODUCTS */
-.products{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:25px;
-  margin-top:30px;
-}
-
-.card{
-  background:#111;
-  padding:20px;
-  border-radius:15px;
-  transition:0.3s;
-  position:relative;
-}
-
-.card:hover{
-  transform:translateY(-10px);
-}
-
-.badge{
-  position:absolute;
-  top:10px;
-  left:10px;
-  background:#0f0;
-  color:#000;
-  padding:5px 10px;
-  font-size:12px;
-  border-radius:5px;
-}
-
-.card img{
-  width:100%;
-  border-radius:10px;
-}
-
-.price{
-  color:#0f0;
-  margin-top:5px;
-}
-
-/* DARK SECTION */
-.dark{
-  background:#111;
-}
-
-footer{
-  text-align:center;
-  padding:30px;
-  color:#777;
-}
-</style>
+    .floating-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25D366;
+      color: white;
+      padding: 15px;
+      border-radius: 50%;
+      font-size: 20px;
+      text-decoration: none;
+    }
+  </style>
 </head>
 
 <body>
 
-<nav>
-  <h1> Sam’s Apple Store</h1>
-  <div>
-    <a href="#products">Products</a>
-    <a href="#contact">Contact</a>
-  </div>
-</nav>
+<header>
+  <h1>Sam’s Apple Store</h1>
+  <p>iPhones for sale • Swapping • Trusted Deals</p>
 
-<section class="hero">
-  <h2>Buy • Sell • Swap iPhones</h2>
-  <p>Original Apple Devices • Trusted Seller • Best Deals</p>
-
-  <a class="btn" href="https://wa.me/233538603560?text=Hello%20I%20want%20to%20buy%20an%20iPhone">
-    Chat on WhatsApp
+  <a class="btn" href="https://wa.me/233538603560?text=Hi%20I%20saw%20your%20website%20and%20I%20want%20to%20buy%20an%20iPhone">
+    View Latest iPhones on WhatsApp
   </a>
-</section>
+</header>
 
-<section class="section" id="products">
+<section class="section">
   <h2>Available iPhones</h2>
 
   <div class="products">
-
     <div class="card">
-      <span class="badge">Available</span>
-      <img src="https://images.unsplash.com/photo-1574672280600-4b7b3f6c1c2f">
-      <h3>iPhone 11 (64GB)</h3>
-      <p>Clean condition • Face ID working</p>
-      <p class="price">Contact for price</p>
-      <a class="btn" href="https://wa.me/233538603560?text=I%20want%20iPhone%2011">Buy Now</a>
+      <h3>iPhone 11</h3>
+      <p>Clean • Affordable</p>
     </div>
 
     <div class="card">
-      <span class="badge">Hot 🔥</span>
-      <img src="https://images.unsplash.com/photo-1603898037225-1c9c2d0f8c89">
-      <h3>iPhone 12 Pro</h3>
-      <p>Excellent battery • Sharp camera</p>
-      <p class="price">Contact for price</p>
-      <a class="btn" href="https://wa.me/233538603560?text=I%20want%20iPhone%2012%20Pro">Buy Now</a>
+      <h3>iPhone 12</h3>
+      <p>Fast • Sleek Design</p>
     </div>
 
     <div class="card">
-      <span class="badge">New</span>
-      <img src="https://images.unsplash.com/photo-1632661674596-618eecb7d3d1">
-      <h3>iPhone 13 Pro Max</h3>
-      <p>Premium performance • Long battery</p>
-      <p class="price">Contact for price</p>
-      <a class="btn" href="https://wa.me/233538603560?text=I%20want%20iPhone%2013%20Pro%20Max">Buy Now</a>
+      <h3>iPhone 13</h3>
+      <p>Premium Performance</p>
     </div>
 
     <div class="card">
-      <span class="badge">Latest</span>
-      <img src="https://images.unsplash.com/photo-1663499482523-1d3f5d1a3cd5">
       <h3>iPhone 14</h3>
-      <p>Modern design • Smooth performance</p>
-      <p class="price">Contact for price</p>
-      <a class="btn" href="https://wa.me/233538603560?text=I%20want%20iPhone%2014">Buy Now</a>
+      <p>Latest Model</p>
     </div>
-
-    <div class="card">
-      <span class="badge">Premium</span>
-      <img src="https://images.unsplash.com/photo-1695048133141-6dba2d8c9e5c">
-      <h3>iPhone 15 Pro</h3>
-      <p>Top performance • Latest model</p>
-      <p class="price">Contact for price</p>
-      <a class="btn" href="https://wa.me/233538603560?text=I%20want%20iPhone%2015%20Pro">Buy Now</a>
-    </div>
-
   </div>
 </section>
 
-<section class="section dark">
-  <h2>Our Services</h2>
-  <p>✔ Buy iPhones</p>
-  <p>✔ Sell iPhones</p>
-  <p>✔ Phone Swapping Available</p>
-  <p>✔ Accessories (AirPods, Chargers, Cases)</p>
-</section>
-
 <section class="section">
-  <h2>Why Choose Us</h2>
-  <p>✔ Original Apple Devices</p>
-  <p>✔ Trusted Seller in Takoradi</p>
-  <p>✔ Fast WhatsApp Response</p>
-  <p>✔ Best Prices Guaranteed</p>
-</section>
-
-<section class="section dark">
   <h2>Location</h2>
-  <p>📍 Takoradi – Opposite Ecobank</p>
+  <p>Takoradi – Opposite Ecobank</p>
 </section>
 
-<section class="section" id="contact">
-  <h2>Contact</h2>
-  <p>📞 0538603560</p>
-  <p>📧 popsam1409@gmail.com</p>
-
-  <a class="btn" href="https://wa.me/233538603560?text=Hello%20I%20am%20interested%20in%20your%20iPhones">
-    Message Now
-  </a>
-</section>
-
-<footer>
-  <p>© 2026 Sam’s Apple Store</p>
-</footer>
+<!-- Floating WhatsApp Button -->
+<a class="floating-btn" href="https://wa.me/233538603560?text=Hi%20I%20want%20to%20buy%20an%20iPhone">
+  💬
+</a>
 
 </body>
 </html>
